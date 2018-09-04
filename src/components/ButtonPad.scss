@@ -1,0 +1,30 @@
+.drum_pad {
+  width: 120px;
+  height: 80px;
+  background-color: $light-gray;
+  border: solid 5px $gray;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 0 0 $black;
+
+  &:hover, &:focus {
+    cursor: pointer;
+    background-color: $gray;
+  }
+
+  &:active {
+    box-shadow: 0 2px 0 0 $black;
+  }
+
+  &:before {
+    content: " ";
+    position: absolute;
+    z-index: 2;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid $black;
+    border-radius: 10px;
+  }
+}

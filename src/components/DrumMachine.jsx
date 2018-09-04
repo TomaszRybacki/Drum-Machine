@@ -1,9 +1,15 @@
 import React from 'react';
 
+import ControlPanel from './ControlPanel.jsx';
+import DisplayPanel from './DisplayPanel.jsx';
+
 class DrumMachine extends React.Component {
   render() {
     return (
-      <h1>Drum Machine</h1>
+      <div className="drum_machine" id="drum-machine">
+        <DisplayPanel></DisplayPanel>
+        <ControlPanel></ControlPanel>
+      </div>
     );
   }
 }

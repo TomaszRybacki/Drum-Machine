@@ -1,0 +1,22 @@
+body {
+  background-image: url(../img/drummer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+.drum_machine {
+  background-image: url(../img/leather.jpg);
+  background-size: cover;
+
+  width: 520px;
+  height: 560px;
+  margin: 0 auto;
+  border: solid $black 2px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
