@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ButtonPad() {
+function ButtonPad(props) {
   return (
-    <button className="drum_pad"></button>
+    <button onClick={props.playSound} className="drum_pad">{props.children}</button>
   );
 }
 

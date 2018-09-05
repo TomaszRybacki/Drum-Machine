@@ -6,6 +6,9 @@
   border-radius: 10px;
   position: relative;
   box-shadow: 0 5px 0 0 $black;
+  font: $medium $basic;
+  font-weight: 700;
+  text-align: center;
 
   &:hover, &:focus {
     cursor: pointer;

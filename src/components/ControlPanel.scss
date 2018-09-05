@@ -12,3 +12,19 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.keyboard-key {
+  color: $red;
+  font-size: 1.250em;
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: solid 2px $black;
+  padding: 2px;
+}
+
+.sound-name {
+  color: $black;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2px;
+}
