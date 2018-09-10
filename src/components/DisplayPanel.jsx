@@ -1,9 +1,9 @@
 import React from 'react';
 
-function DisplayPanel() {
+function DisplayPanel(props) {
   return (
     <div className="display_panel" id="display-panel">
-      <button className="power-button">ON / OFF</button>
+      <button className={(props.power ? 'power-button isOn' : 'power-button')} onClick={props.powerSwitch}>ON / OFF</button>
       <h1 className="signature">The Drum Machine</h1>
       <div className="display"></div>
     </div>
@@ -11,3 +11,5 @@ function DisplayPanel() {
 }
 
 export default DisplayPanel;
+
+// className={"btn-group pull-right " + (this.props.showBulkActions ? 'show' : 'hidden')}
