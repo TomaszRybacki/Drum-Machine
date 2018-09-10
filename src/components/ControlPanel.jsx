@@ -1,44 +1,62 @@
 import React from 'react';
 
+import sounds from './../sounds.js';
 import ButtonPad from './ButtonPad.jsx';
 
 class ControlPanel extends React.Component {
   handleSound = (event) => {
-    const soundtrack = event.target.children[1].textContent.toLowerCase();
-    sounds[soundtrack].play();
+    event.target.children[2].play();
   }
 
   render() {
     return (
       <div className="control_panel" id="control-panel">
         <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">Q</div><div className="sound-name">CHINA</div>
+          <div className="keyboard-key">{sounds.china.keyboardKey}</div>
+          <div className="sound-name">{sounds.china.soundName}</div>
+          <audio src={sounds.china.src}><track kind="captions" /></audio>
         </ButtonPad>
         <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">W</div><div className="sound-name">CRASH</div>
+          <div className="keyboard-key">{sounds.crash.keyboardKey}</div>
+          <div className="sound-name">{sounds.crash.soundName}</div>
+          <audio src={sounds.crash.src}><track kind="captions" /></audio>
         </ButtonPad>
         <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">E</div><div className="sound-name">HHOPEN</div>
-        </ButtonPad>
-
-        <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">A</div><div className="sound-name">RIDECUP</div>
-        </ButtonPad>
-        <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">S</div><div className="sound-name">RIDEEDGE</div>
-        </ButtonPad>
-        <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">D</div><div className="sound-name">RIDEMID</div>
+          <div className="keyboard-key">{sounds.hhopen.keyboardKey}</div>
+          <div className="sound-name">{sounds.hhopen.soundName}</div>
+          <audio src={sounds.hhopen.src}><track kind="captions" /></audio>
         </ButtonPad>
 
         <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">Z</div><div className="sound-name">TOMHI</div>
+          <div className="keyboard-key">{sounds.ridecup.keyboardKey}</div>
+          <div className="sound-name">{sounds.ridecup.soundName}</div>
+          <audio src={sounds.ridecup.src}><track kind="captions" /></audio>
         </ButtonPad>
         <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">X</div><div className="sound-name">TOMLOW</div>
+          <div className="keyboard-key">{sounds.rideedge.keyboardKey}</div>
+          <div className="sound-name">{sounds.rideedge.soundName}</div>
+          <audio src={sounds.rideedge.src}><track kind="captions" /></audio>
         </ButtonPad>
         <ButtonPad playSound={this.handleSound}>
-          <div className="keyboard-key">C</div><div className="sound-name">BDRUM</div>
+          <div className="keyboard-key">{sounds.ridemid.keyboardKey}</div>
+          <div className="sound-name">{sounds.ridemid.soundName}</div>
+          <audio src={sounds.ridemid.src}><track kind="captions" /></audio>
+        </ButtonPad>
+
+        <ButtonPad playSound={this.handleSound}>
+          <div className="keyboard-key">{sounds.tomhi.keyboardKey}</div>
+          <div className="sound-name">{sounds.tomhi.soundName}</div>
+          <audio src={sounds.tomhi.src}><track kind="captions" /></audio>
+        </ButtonPad>
+        <ButtonPad playSound={this.handleSound}>
+          <div className="keyboard-key">{sounds.tomlow.keyboardKey}</div>
+          <div className="sound-name">{sounds.tomlow.soundName}</div>
+          <audio src={sounds.tomlow.src}><track kind="captions" /></audio>
+        </ButtonPad>
+        <ButtonPad playSound={this.handleSound}>
+          <div className="keyboard-key">{sounds.bdrum.keyboardKey}</div>
+          <div className="sound-name">{sounds.bdrum.soundName}</div>
+          <audio src={sounds.bdrum.src}><track kind="captions" /></audio>
         </ButtonPad>
       </div>
     );
@@ -46,28 +64,3 @@ class ControlPanel extends React.Component {
 }
 
 export default ControlPanel;
-
-const sounds = {
-  china: document.createElement('audio'),
-  crash: document.createElement('audio'),
-  hhopen: document.createElement('audio'),
-  ridecup: document.createElement('audio'),
-  rideedge: document.createElement('audio'),
-  ridemid: document.createElement('audio'),
-  tomhi: document.createElement('audio'),
-  tomlow: document.createElement('audio'),
-  bdrum: document.createElement('audio')
-};
-
-sounds.china.setAttribute('src', './../sounds/CHINA.wav');
-sounds.crash.setAttribute('src', './../sounds/CRASH.wav');
-sounds.hhopen.setAttribute('src', './../sounds/HHOPEN.wav');
-
-sounds.ridecup.setAttribute('src', './../sounds/RIDECUP.wav');
-sounds.rideedge.setAttribute('src', './../sounds/RIDEEDGE.wav');
-sounds.ridemid.setAttribute('src', './../sounds/RIDEMID.wav');
-
-sounds.tomhi.setAttribute('src', './../sounds/TOMHI.wav');
-sounds.tomlow.setAttribute('src', './../sounds/TOMLOW.wav');
-sounds.bdrum.setAttribute('src', './../sounds/BDRUM.wav');
-
