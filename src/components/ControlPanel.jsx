@@ -21,55 +21,78 @@ class ControlPanel extends React.Component {
   handleClick = (event) => {
     const audioElement = event.target.children[2];
     this.playSound(audioElement);
+    //  this.props.setActiveSound(china.soundName);
+    // TODO naprawić klika
   }
 
   handleKeyDown = (event) => {
     let audioElement;
+    const {
+      china,
+      crash,
+      hhopen,
+      ridecup,
+      rideedge,
+      ridemid,
+      tomhi,
+      tomlow,
+      bdrum
+    } = this.props.sounds;
+
     if (!this.props.power) {
-      switch (event.key) {
-        case 'q': {
-          audioElement = document.querySelector('#Q');
+      switch (event.keyCode) {
+        case china.keyCode: {
+          audioElement = document.querySelector(`#${china.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(china.soundName);
           break;
         }
-        case 'w': {
-          audioElement = document.querySelector('#W');
+        case crash.keyCode: {
+          audioElement = document.querySelector(`#${crash.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(crash.soundName);
           break;
         }
-        case 'e': {
-          audioElement = document.querySelector('#E');
+        case hhopen.keyCode: {
+          audioElement = document.querySelector(`#${hhopen.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(hhopen.soundName);
           break;
         }
-        case 'a': {
-          audioElement = document.querySelector('#A');
+        case ridecup.keyCode: {
+          audioElement = document.querySelector(`#${ridecup.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(ridecup.soundName);
           break;
         }
-        case 's': {
-          audioElement = document.querySelector('#S');
+        case rideedge.keyCode: {
+          audioElement = document.querySelector(`#${rideedge.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(rideedge.soundName);
           break;
         }
-        case 'd': {
-          audioElement = document.querySelector('#D');
+        case ridemid.keyCode: {
+          audioElement = document.querySelector(`#${ridemid.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(ridemid.soundName);
           break;
         }
-        case 'z': {
-          audioElement = document.querySelector('#Z');
+        case tomhi.keyCode: {
+          audioElement = document.querySelector(`#${tomhi.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(tomhi.soundName);
           break;
         }
-        case 'x': {
-          audioElement = document.querySelector('#X');
+        case tomlow.keyCode: {
+          audioElement = document.querySelector(`#${tomlow.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(tomlow.soundName);
           break;
         }
-        case 'c': {
-          audioElement = document.querySelector('#C');
+        case bdrum.keyCode: {
+          audioElement = document.querySelector(`#${bdrum.keyboardKey}`);
           this.playSound(audioElement);
+          this.props.setActiveSound(bdrum.soundName);
           break;
         }
         default: // do nothing
@@ -146,6 +169,7 @@ class ControlPanel extends React.Component {
 
 ControlPanel.propTypes = {
   power: PropTypes.bool.isRequired,
+  setActiveSound: PropTypes.func.isRequired,
   sounds: PropTypes.objectOf(PropTypes.object).isRequired
 };
 

@@ -44,8 +44,16 @@
   background-color: $black;
   border-radius: 10px;
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .isOn {
   background-image: linear-gradient($dark-red, $red);
+}
+
+.display__sound-name {
+  font: $medium $basic;
+  color: $white;
 }

@@ -12,7 +12,7 @@ function ButtonPad(props) {
 ButtonPad.propTypes = {
   clickSound: PropTypes.func.isRequired,
   disabled: PropTypes.bool.isRequired,
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default ButtonPad;

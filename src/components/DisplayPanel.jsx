@@ -6,14 +6,21 @@ function DisplayPanel(props) {
     <div className="display_panel" id="display-panel">
       <button className={(props.power ? 'power-button isOn' : 'power-button')} onClick={props.powerSwitch}>ON / OFF</button>
       <h1 className="signature">The Drum Machine</h1>
-      <div className="display" />
+      <div className="display">
+        <span className="display__sound-name">{props.activeSound}</span>
+      </div>
     </div>
   );
 }
 
 DisplayPanel.propTypes = {
   power: PropTypes.bool.isRequired,
-  powerSwitch: PropTypes.func.isRequired
+  powerSwitch: PropTypes.func.isRequired,
+  activeSound: PropTypes.string
+};
+
+DisplayPanel.defaultProps = {
+  activeSound: null
 };
 
 export default DisplayPanel;

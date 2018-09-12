@@ -10,8 +10,15 @@ class DrumMachine extends React.Component {
     super(props);
 
     this.state = {
-      isOff: true
+      isOff: true,
+      activeSound: null
     };
+  }
+
+  setActiveSound = (currentSound) => {
+    this.setState({
+      activeSound: currentSound
+    });
   }
 
   turnOn = () => {
@@ -23,8 +30,8 @@ class DrumMachine extends React.Component {
   render() {
     return (
       <div className="drum_machine" id="drum-machine">
-        <DisplayPanel power={this.state.isOff} powerSwitch={this.turnOn} />
-        <ControlPanel power={this.state.isOff} sounds={sounds} />
+        <DisplayPanel power={this.state.isOff} powerSwitch={this.turnOn} activeSound={this.state.activeSound} />
+        <ControlPanel power={this.state.isOff} sounds={sounds} setActiveSound={this.setActiveSound} />
       </div>
     );
   }
