@@ -11,5 +11,3 @@ function DisplayPanel(props) {
 }
 
 export default DisplayPanel;
-
-// className={"btn-group pull-right " + (this.props.showBulkActions ? 'show' : 'hidden')}
