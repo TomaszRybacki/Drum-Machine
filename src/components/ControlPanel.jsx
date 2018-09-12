@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import ButtonPad from './ButtonPad.jsx';
 
@@ -77,7 +78,17 @@ class ControlPanel extends React.Component {
   }
 
   render() {
-    const { china, crash, hhopen, ridecup, rideedge, ridemid, tomhi, tomlow, bdrum } = this.props.sounds;
+    const {
+      china,
+      crash,
+      hhopen,
+      ridecup,
+      rideedge,
+      ridemid,
+      tomhi,
+      tomlow,
+      bdrum
+    } = this.props.sounds;
 
     return (
       <div className="control_panel" id="control-panel">
@@ -132,5 +143,10 @@ class ControlPanel extends React.Component {
     );
   }
 }
+
+ControlPanel.propTypes = {
+  power: PropTypes.bool.isRequired,
+  sounds: PropTypes.objectOf(PropTypes.object).isRequired
+};
 
 export default ControlPanel;
