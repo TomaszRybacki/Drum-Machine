@@ -23,7 +23,10 @@ class ControlPanel extends React.Component {
     this.playSound(audioElement);
 
     const soundName = audioElement.getAttribute('sound-name');
+    const soundGraph = audioElement.getAttribute('sound-graph');
+
     this.props.setActiveSound(soundName);
+    this.props.setActiveGraph(soundGraph);
   }
 
   handleKeyDown = (event) => {
@@ -128,49 +131,118 @@ class ControlPanel extends React.Component {
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{china.keyboardKey}</div>
           <div className="sound-name">{china.soundName}</div>
-          <audio id={china.keyboardKey} sound-name={china.soundName} src={china.src}><track kind="captions" /></audio>
+          <audio
+            id={china.keyboardKey}
+            sound-name={china.soundName}
+            sound-graph={china.graph}
+            src={china.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
+
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{crash.keyboardKey}</div>
           <div className="sound-name">{crash.soundName}</div>
-          <audio id={crash.keyboardKey} sound-name={crash.soundName} src={crash.src}><track kind="captions" /></audio>
+          <audio
+            id={crash.keyboardKey}
+            sound-name={crash.soundName}
+            sound-graph={crash.graph}
+            src={crash.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
+
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{hhopen.keyboardKey}</div>
           <div className="sound-name">{hhopen.soundName}</div>
-          <audio id={hhopen.keyboardKey} sound-name={hhopen.soundName} src={hhopen.src}><track kind="captions" /></audio>
+          <audio
+            id={hhopen.keyboardKey}
+            sound-name={hhopen.soundName}
+            sound-graph={hhopen.graph}
+            src={hhopen.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
 
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{ridecup.keyboardKey}</div>
           <div className="sound-name">{ridecup.soundName}</div>
-          <audio id={ridecup.keyboardKey} sound-name={ridecup.soundName} src={ridecup.src}><track kind="captions" /></audio>
+          <audio
+            id={ridecup.keyboardKey}
+            sound-name={ridecup.soundName}
+            sound-graph={ridecup.graph}
+            src={ridecup.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
+
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{rideedge.keyboardKey}</div>
           <div className="sound-name">{rideedge.soundName}</div>
-          <audio id={rideedge.keyboardKey} sound-name={rideedge.soundName} src={rideedge.src}><track kind="captions" /></audio>
+          <audio
+            id={rideedge.keyboardKey}
+            sound-name={rideedge.soundName}
+            sound-graph={rideedge.graph}
+            src={rideedge.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
+
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{ridemid.keyboardKey}</div>
           <div className="sound-name">{ridemid.soundName}</div>
-          <audio id={ridemid.keyboardKey} sound-name={ridemid.soundName} src={ridemid.src}><track kind="captions" /></audio>
+          <audio
+            id={ridemid.keyboardKey}
+            sound-name={ridemid.soundName}
+            sound-graph={ridemid.graph}
+            src={ridemid.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
 
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{tomhi.keyboardKey}</div>
           <div className="sound-name">{tomhi.soundName}</div>
-          <audio id={tomhi.keyboardKey} sound-name={tomhi.soundName} src={tomhi.src}><track kind="captions" /></audio>
+          <audio
+            id={tomhi.keyboardKey}
+            sound-name={tomhi.soundName}
+            sound-graph={tomhi.graph}
+            src={tomhi.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
+
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{tomlow.keyboardKey}</div>
           <div className="sound-name">{tomlow.soundName}</div>
-          <audio id={tomlow.keyboardKey} sound-name={tomlow.soundName} src={tomlow.src}><track kind="captions" /></audio>
+          <audio
+            id={tomlow.keyboardKey}
+            sound-name={tomlow.soundName}
+            sound-graph={tomlow.graph}
+            src={tomlow.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
+
         <ButtonPad clickSound={this.handleClick} disabled={this.props.power}>
           <div className="keyboard-key">{bdrum.keyboardKey}</div>
           <div className="sound-name">{bdrum.soundName}</div>
-          <audio id={bdrum.keyboardKey} sound-name={bdrum.soundName} src={bdrum.src}><track kind="captions" /></audio>
+          <audio
+            id={bdrum.keyboardKey}
+            sound-name={bdrum.soundName}
+            sound-graph={bdrum.graph}
+            src={bdrum.src}
+          >
+            <track kind="captions" />
+          </audio>
         </ButtonPad>
       </div>
     );
