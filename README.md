@@ -1,10 +1,10 @@
 # Drum Machine
 
-Drum machine that imitate drum kit. Press key on your keyboard to play corresponding sound. Play your favorite soundtrack or just have fun!
+Drum machine that imitate drum kit. Press key on your keyboard to play corresponding sound. Have fun!
 
 ## Live preview
 
-[Link to github.io preview page - coming soon]()
+[Link to github.io preview page](https://tomaszrybacki.github.io/Drum-Machine/)
 
 ## Free Code Camp challenge
 
