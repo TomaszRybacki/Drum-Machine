@@ -46,54 +46,63 @@ class ControlPanel extends React.Component {
           audioElement = document.querySelector(`#${china.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(china.soundName);
+          this.props.setActiveGraph(china.graph);
           break;
         }
         case crash.keyCode: {
           audioElement = document.querySelector(`#${crash.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(crash.soundName);
+          this.props.setActiveGraph(crash.graph);
           break;
         }
         case hhopen.keyCode: {
           audioElement = document.querySelector(`#${hhopen.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(hhopen.soundName);
+          this.props.setActiveGraph(hhopen.graph);
           break;
         }
         case ridecup.keyCode: {
           audioElement = document.querySelector(`#${ridecup.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(ridecup.soundName);
+          this.props.setActiveGraph(ridecup.graph);
           break;
         }
         case rideedge.keyCode: {
           audioElement = document.querySelector(`#${rideedge.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(rideedge.soundName);
+          this.props.setActiveGraph(rideedge.graph);
           break;
         }
         case ridemid.keyCode: {
           audioElement = document.querySelector(`#${ridemid.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(ridemid.soundName);
+          this.props.setActiveGraph(ridemid.graph);
           break;
         }
         case tomhi.keyCode: {
           audioElement = document.querySelector(`#${tomhi.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(tomhi.soundName);
+          this.props.setActiveGraph(tomhi.graph);
           break;
         }
         case tomlow.keyCode: {
           audioElement = document.querySelector(`#${tomlow.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(tomlow.soundName);
+          this.props.setActiveGraph(tomlow.graph);
           break;
         }
         case bdrum.keyCode: {
           audioElement = document.querySelector(`#${bdrum.keyboardKey}`);
           this.playSound(audioElement);
           this.props.setActiveSound(bdrum.soundName);
+          this.props.setActiveGraph(bdrum.graph);
           break;
         }
         default: // do nothing
@@ -171,6 +180,7 @@ class ControlPanel extends React.Component {
 ControlPanel.propTypes = {
   power: PropTypes.bool.isRequired,
   setActiveSound: PropTypes.func.isRequired,
+  setActiveGraph: PropTypes.func.isRequired,
   sounds: PropTypes.objectOf(PropTypes.object).isRequired
 };
 

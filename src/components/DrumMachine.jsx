@@ -11,7 +11,8 @@ class DrumMachine extends React.Component {
 
     this.state = {
       isOff: true,
-      activeSound: null
+      activeSound: null,
+      activeGraph: './img/sound-0.jpg'
     };
   }
 
@@ -21,17 +22,35 @@ class DrumMachine extends React.Component {
     });
   }
 
+  setActiveGraph = (graphUrl) => {
+    this.setState({
+      activeGraph: graphUrl
+    });
+  }
+
   turnOn = () => {
     this.setState({
-      isOff: !this.state.isOff
+      isOff: !this.state.isOff,
+      activeSound: null,
+      activeGraph: './img/sound-0.jpg'
     });
   }
 
   render() {
     return (
       <div className="drum_machine" id="drum-machine">
-        <DisplayPanel power={this.state.isOff} powerSwitch={this.turnOn} activeSound={this.state.activeSound} />
-        <ControlPanel power={this.state.isOff} sounds={sounds} setActiveSound={this.setActiveSound} />
+        <DisplayPanel
+          power={this.state.isOff}
+          powerSwitch={this.turnOn}
+          activeSound={this.state.activeSound}
+          activeGraph={this.state.activeGraph}
+        />
+        <ControlPanel
+          power={this.state.isOff}
+          sounds={sounds}
+          setActiveSound={this.setActiveSound}
+          setActiveGraph={this.setActiveGraph}
+        />
       </div>
     );
   }
