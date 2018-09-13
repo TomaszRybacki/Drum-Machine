@@ -2,14 +2,18 @@ body {
   background-image: url(../img/drummer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
 }
 
 .drum_machine {
   background-image: url(../img/leather.jpg);
   background-size: cover;
 
-  width: 520px;
+  width: 450px;
   height: 560px;
   margin: 0 auto;
   border: solid $black 2px;
